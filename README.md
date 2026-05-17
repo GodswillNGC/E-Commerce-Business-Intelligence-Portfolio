@@ -140,7 +140,7 @@ This page visually represents how revenue is distributed across continents and c
 
 ![Power BI Dashboard Preview](./Visuals/Geographic_Analysis.png)
 
-## 📊 Key Visuals
+## Key Visuals
 
 • Map: Revenue by Country
 
@@ -148,7 +148,7 @@ This page visually represents how revenue is distributed across continents and c
 
 • Table: Country-wise Revenue and Category Breakdown
 
-## 🧠 DAX Measures & Calculated Columns
+## DAX Measures & Calculated Columns
 
 Total Revenue = SUM(ecommerce_orders_2023[Quantity] * ecommerce_orders_2023[Unit Price])
 Continents = SWITCH(
