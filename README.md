@@ -235,7 +235,4 @@ More than just a report, this portfolio tells a story. It is one where data driv
 
 🔗 [LinkedIn](https://www.linkedin.com/in/godswill-ndubuisi-3341401a2)  
 
-🔵 [Facebook](https://www.facebook.com/godswill.ndubuisi.92)
-
-💬 [Chat on WhatsApp](https://wa.me/message/FB4QE6CIUUF6D1)  
 
