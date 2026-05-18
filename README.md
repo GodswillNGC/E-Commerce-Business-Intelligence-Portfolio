@@ -1,7 +1,7 @@
 # E-Commerce Business Intelligence 
 An interactive Power BI dashboard for in-depth e-commerce analytics, featuring sales performance, customer behavior, category insights, and geographic distribution. Includes dynamic visuals, cross-filtering, DAX-driven KPIs, and multi-page navigation for a complete business intelligence experience.
 
-![Power BI Dashboard Preview](./Visuals/Dashboards.png)
+![Power BI Dashboard Preview](./Visuals/Collage.png)
 
 
 ## Project Overview
@@ -150,17 +150,45 @@ This page visually represents how revenue is distributed across continents and c
 
 ## DAX Measures & Calculated Columns
 
-Total Revenue = SUM(ecommerce_orders_2023[Quantity] * ecommerce_orders_2023[Unit Price])
-Continents = SWITCH(
+```DAX
+Total Revenue = 
+SUM(
+    ecommerce_orders_2023[Quantity] * ecommerce_orders_2023[Unit Price]
+)
+
+Continents = 
+SWITCH(
     TRUE(),
-    ecommerce_orders_2023[Country] IN {"United States", "Canada", "Mexico"}, "North America",
-    ecommerce_orders_2023[Country] IN {"Germany", "France", "United Kingdom", "Spain", "Italy", "Netherlands"}, "Europe",
-    ecommerce_orders_2023[Country] IN {"India", "China", "Japan", "Singapore", "United Arab Emirates"}, "Asia",
-    ecommerce_orders_2023[Country] IN {"Australia", "New Zealand"}, "Oceania",
-    ecommerce_orders_2023[Country] IN {"Brazil", "Argentina", "Chile"}, "South America",
-    ecommerce_orders_2023[Country] IN {"Nigeria", "South Africa", "Egypt", "Kenya"}, "Africa",
+
+    ecommerce_orders_2023[Country] IN {
+        "United States", "Canada", "Mexico"
+    }, "North America",
+
+    ecommerce_orders_2023[Country] IN {
+        "Germany", "France", "United Kingdom",
+        "Spain", "Italy", "Netherlands"
+    }, "Europe",
+
+    ecommerce_orders_2023[Country] IN {
+        "India", "China", "Japan",
+        "Singapore", "United Arab Emirates"
+    }, "Asia",
+
+    ecommerce_orders_2023[Country] IN {
+        "Australia", "New Zealand"
+    }, "Oceania",
+
+    ecommerce_orders_2023[Country] IN {
+        "Brazil", "Argentina", "Chile"
+    }, "South America",
+
+    ecommerce_orders_2023[Country] IN {
+        "Nigeria", "South Africa", "Egypt", "Kenya"
+    }, "Africa",
+
     "Other"
 )
+```
 ##  Insights
 
 North America and Europe dominate in total sales.
